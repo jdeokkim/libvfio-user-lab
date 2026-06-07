@@ -17,14 +17,66 @@
 
 /* Includes ===============================================================> */
 
+#include <err.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/* ------------------------------------------------------------------------- */
+
 #include <vfio-user/libvfio-user.h>
+
+/* Private Function Prototypes ============================================> */
+
+static void vful_log(vfu_ctx_t *vfu_ctx, int level, const char *msg);
 
 /* Entry Point ============================================================> */
 
 int main(void) {
-    // TODO: ...
+    const char *const sock_path = "/tmp/libvfio-user-lab.sock";
 
-    return 0;
+    vfu_ctx_t *vfu_ctx = vfu_create_ctx(
+        VFU_TRANS_SOCK,
+        sock_path,
+        0,
+        NULL,
+        VFU_DEV_TYPE_PCI
+    );
+
+    if (vfu_ctx == NULL)
+        err(EXIT_FAILURE, "failed to initialize libvfio-user context");
+
+    int ret = vfu_setup_log(vfu_ctx, vful_log, LOG_WARNING);
+
+    if (ret < 0)
+        err(EXIT_FAILURE, "failed to initialize logger");
+
+    ret = vfu_pci_init(
+        vfu_ctx,
+        VFU_PCI_TYPE_EXPRESS,
+        PCI_HEADER_TYPE_NORMAL,
+        0
+    );
+
+    if (ret < 0)
+        err(EXIT_FAILURE, "failed to initialize PCIe configuration space");
+
+    {
+        // TODO: ...
+    }
+
+    vfu_destroy_ctx(vfu_ctx);
+
+    return EXIT_SUCCESS;
 }
+
+/* Private Functions ======================================================> */
+
+static void vful_log(vfu_ctx_t *vfu_ctx, int level, const char *msg) {
+    (void) vfu_ctx;
+    (void) level;
+
+    fprintf(stderr, "[%d]: %s\n", getpid(), msg);
+}
+
 
 /* ========================================================================> */

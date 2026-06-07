@@ -59,7 +59,7 @@ CFLAGS = -D_DEFAULT_SOURCE ${CLFLAGS} -g -I${INCLUDE_PATH} -I${SOURCE_PATH} \
 	-O2 -std=c99 -Wall -Wconversion -Wdouble-promotion -Wpedantic -Wno-unused
 
 LDFLAGS = ${CLFLAGS}
-LDLIBS = -lm -l:libvfio-user.a
+LDLIBS = -ljson-c -lm -l:libvfio-user.a
 
 # ============================================================================>
 
