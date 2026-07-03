@@ -1,0 +1,122 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="s45HJucgf4SA8I4RNYdR">
+    <mxGraphModel dx="1045" dy="1627" grid="1" gridSize="16" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#F4F4F4" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rzREDnaWuBDmD_pBH9be-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=-25;fontStyle=1" value="CPU (Chip)" vertex="1">
+          <mxGeometry height="160" width="256" x="256" y="-48" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-21" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="128" width="224" x="272" y="-32" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-5" parent="rzREDnaWuBDmD_pBH9be-21" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=-2;dashed=1;dashPattern=1 2;spacingLeft=2;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontStyle=0" value="CPU (Core)" vertex="1">
+          <mxGeometry height="128" width="224" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-10" parent="rzREDnaWuBDmD_pBH9be-21" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="Control Unit" vertex="1">
+          <mxGeometry height="32" width="64" x="16" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-11" parent="rzREDnaWuBDmD_pBH9be-21" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="Exec. Unit (ALU)" vertex="1">
+          <mxGeometry height="48" width="64" x="16" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-12" parent="rzREDnaWuBDmD_pBH9be-21" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="Register File" vertex="1">
+          <mxGeometry height="90" width="56" x="88" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-13" parent="rzREDnaWuBDmD_pBH9be-21" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="&lt;div&gt;L1/L2&lt;/div&gt;&lt;div&gt;Cache&lt;/div&gt;" vertex="1">
+          <mxGeometry height="42" width="56" x="152" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-14" parent="rzREDnaWuBDmD_pBH9be-21" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="MMU" vertex="1">
+          <mxGeometry height="38" width="56" x="152" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-29" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="rzREDnaWuBDmD_pBH9be-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="384" y="176" as="sourcePoint" />
+            <mxPoint x="402" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-30" connectable="0" parent="rzREDnaWuBDmD_pBH9be-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;fontSize=12;labelBackgroundColor=none;" value="&lt;div&gt;Front Side Bus&amp;nbsp;&lt;/div&gt;&lt;div&gt;(FSB)&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.053" y="2" as="geometry">
+            <mxPoint x="50" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="DRAM" vertex="1">
+          <mxGeometry height="128" width="64" x="128" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-22" connectable="0" parent="1" style="group;fillColor=#f8cecc;strokeColor=#b85450;container=0;" value="Northbridge (Host Bridge)" vertex="1">
+          <mxGeometry height="80" width="176" x="296" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="&lt;div&gt;Memory&lt;/div&gt;&lt;div&gt;Controller&lt;/div&gt;" vertex="1">
+          <mxGeometry height="32" width="64" x="312" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="&lt;div&gt;AGP/PCI&lt;/div&gt;&lt;div&gt;Controller&lt;/div&gt;" vertex="1">
+          <mxGeometry height="32" width="64" x="392" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-36" edge="1" parent="1" source="rzREDnaWuBDmD_pBH9be-32" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="224" y="224" as="sourcePoint" />
+            <mxPoint x="295" y="216" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="GPU" vertex="1">
+          <mxGeometry height="120" width="64" x="576" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-38" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="473" y="215.70999999999998" as="sourcePoint" />
+            <mxPoint x="576" y="215.70999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-40" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;startSize=8;endSize=8;fillColor=#141414;strokeColor=#1D1D1D;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="64" y="320" as="sourcePoint" />
+            <mxPoint x="704" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-47" connectable="0" parent="rzREDnaWuBDmD_pBH9be-40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;" value="PCI (33 MHz)" vertex="1">
+          <mxGeometry relative="1" x="-0.7115" y="3" as="geometry">
+            <mxPoint x="180" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-48" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="80" width="352" x="128" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-39" connectable="0" parent="rzREDnaWuBDmD_pBH9be-48" style="group;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;" value="Southbridge (I/O Controller Hub)" vertex="1">
+          <mxGeometry height="80" width="352" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-42" parent="rzREDnaWuBDmD_pBH9be-48" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="&lt;div&gt;IDE (PATA)&lt;/div&gt;&lt;div&gt;Controller&lt;/div&gt;" vertex="1">
+          <mxGeometry height="32" width="80" x="16" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-44" parent="rzREDnaWuBDmD_pBH9be-48" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="&lt;div&gt;SATA&lt;/div&gt;&lt;div&gt;Controller&lt;/div&gt;" vertex="1">
+          <mxGeometry height="32" width="64" x="192" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-45" parent="rzREDnaWuBDmD_pBH9be-48" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="&lt;div&gt;USB&lt;/div&gt;&lt;div&gt;Controller&lt;/div&gt;" vertex="1">
+          <mxGeometry height="32" width="64" x="272" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-46" parent="rzREDnaWuBDmD_pBH9be-48" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;" value="&lt;div&gt;PCI&lt;/div&gt;&lt;div&gt;Controller&lt;/div&gt;" vertex="1">
+          <mxGeometry height="32" width="64" x="112" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-49" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;width=9;endSize=4;endWidth=12;fillColor=#141414;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="384" y="320" as="sourcePoint" />
+            <mxPoint x="384" y="256" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-50" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;width=9;endSize=4;endWidth=12;fillColor=#141414;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="304" y="320" as="sourcePoint" />
+            <mxPoint x="304" y="384" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-53" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;fontStyle=1;fillColor=#d0cee2;strokeColor=#56517e;" value="Ethernet?" vertex="1">
+          <mxGeometry height="80" width="64" x="560" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="rzREDnaWuBDmD_pBH9be-52" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;width=9;endSize=4;endWidth=12;fillColor=#141414;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="rzREDnaWuBDmD_pBH9be-53" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="592" y="320" as="sourcePoint" />
+            <mxPoint x="592" y="384" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
