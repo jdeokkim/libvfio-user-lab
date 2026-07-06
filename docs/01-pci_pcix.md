@@ -22,9 +22,33 @@ PCI 장치는 하나 이상의 기능 (function)을 가질 수 있는데, '그�
 
 <br>
 
+## PCI Bus Cycle
+
+<img src="./images/pci_card-v1.png" width="600"/>
+
+(추가 예정)
+
+<br>
+
 ## PCI Transaction Models
 
+PCI 장치가 CPU, RAM, 그리고 다른 PCI 장치와 데이터를 주고 받을 수 있는 방법에는 총 3가지가 있다.
+
+### Programmed I/O
+
 <br> 
+
+### Direct Memory Access (DMA)
+
+<br> 
+
+### Peer-to-Peer (P2P)
+
+<br>
+
+## PCI Address Spaces
+
+<br>
 
 ## PCI Enumeration
 
@@ -38,11 +62,7 @@ PCI 장치는 하나 이상의 기능 (function)을 가질 수 있는데, '그�
 
 <br>
 
-## IRQ-based Interrupts
-
-<br>
-
-## MSI-based Interrupts
+## Interrupt Handling
 
 <br>
 
