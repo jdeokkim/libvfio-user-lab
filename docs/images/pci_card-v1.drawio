@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="s45HJucgf4SA8I4RNYdR">
-    <mxGraphModel dx="1791" dy="3103" grid="1" gridSize="16" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#F4F4F4" math="0" shadow="0">
+    <mxGraphModel dx="1393" dy="2902" grid="1" gridSize="16" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#F4F4F4" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -435,6 +435,15 @@
         </mxCell>
         <mxCell id="TMJdQSy-tzjZKkV_rY2I-115" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=top;rounded=0;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;textDirection=vertical-lr;" value="&lt;b&gt;58:&lt;/b&gt; AD[01] ~ AD[00]" vertex="1">
           <mxGeometry height="144" width="16" x="1392" y="-656" as="geometry" />
+        </mxCell>
+        <mxCell id="PLnzfWgrDeKZX6OwDiRZ-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=top;rounded=0;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;textDirection=vertical-lr;" value="&lt;b&gt;42:&amp;nbsp;&lt;/b&gt;SERR# ~ GND" vertex="1">
+          <mxGeometry height="128" width="16" x="1136" y="-656" as="geometry" />
+        </mxCell>
+        <mxCell id="PLnzfWgrDeKZX6OwDiRZ-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=top;rounded=0;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;textDirection=vertical-lr;" value="&lt;b&gt;40:&lt;/b&gt; PERR# ~ ..." vertex="1">
+          <mxGeometry height="128" width="16" x="1104" y="-656" as="geometry" />
+        </mxCell>
+        <mxCell id="PLnzfWgrDeKZX6OwDiRZ-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=top;rounded=0;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;textDirection=vertical-lr;" value="&lt;b&gt;43:&lt;/b&gt; +3.3 V ~ PAR" vertex="1">
+          <mxGeometry height="128" width="16" x="1152" y="-656" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
