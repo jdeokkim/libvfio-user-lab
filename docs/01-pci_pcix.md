@@ -140,24 +140,38 @@ DMA는 메인보드 (Southbridge)의 공용 DMA 컨트롤러 또는 PCI 장치�
 
 ## PCI Address Spaces
 
+<img src="./images/address_spaces-v1.png" width="600"/>
+
 CPU는 I/O Space, Configuration Space, 그리고 Memory Space라는 3가지의 주소 공간을 이용해 PCI 장치를 제어한다.
 
 <br>
 
 ### I/O Space
 
-I/O Space란 x86 CPU의 `in`, `out` 명령어를 통해서만 접근할 수 있는 64 KiB의 주소 공간이다.
+**I/O Space란 x86 CPU의 `in`, `out` 명령어를 통해서만 접근할 수 있는 64 KiB의 주소 공간으로, Southbridge에 연결된 주변 장치들 내의 레지스터를 가리킨다.**
 
-하드웨어 규격이 AT에서 ATX로, 버스 규격이 ISA에서 PCI로 전환되던 90년대 중후반에는 컴퓨터의 부팅 과정이 다음과 같았다:
+> 하드웨어 규격이 AT에서 ATX로, 버스 규격이 ISA에서 PCI로 전환되던 90년대 중후반에는 컴퓨터의 부팅 과정이 다음과 같았다:
+> 
+> 1. 파워 서플라이 (Power Supply Unit, PSU)는 컴퓨터가 꺼져 있어도 AC 전원을 받아 메인 보드에 `+5 VSB`의 전압을 지속적으로 공급하는데, 본체의 전원 버튼을 `10-100 ms` 동안 누르면 메인 보드는 파워 서플라이의 `PS_​ON#` (Active-Low) 핀에 걸리는 전압을 `+5 V`에서 `0 V`로 내린 상태로 유지한다.
+> 2. 파워 서플라이는 `PS_​ON#`의 신호를 받아 `+12VDC`, `+5VDC`, `+3.3VDC` 등의 DC 출력 레일을 켜고, 메인 보드는 출력 레일의 전압이 안정될 때까지 CPU의 `RESET` 핀 전압을 `+5 V`로 올려 CPU를 계속 초기화시킨다.
+> 3. 모든 DC 출력 레일의 전압이 안정되면, 파워 서플라이는 메인 보드의 Super I/O (SIO) 칩에 `PWR_OK` 신호를 보내 이 사실을 알린다.
+> 4. 메인 보드는 CPU의 `RESET` 핀 전압을 `0 V`로 내리는데, 이때 CPU는 범용 레지스터 (`AX`, `BX`, ...), 상태 레지스터 (`FLAGS`), 프로그램 카운터 (`IP`)와 제어 레지스터 (`CR0`) 등이 모두 기본값으로 초기화된 상태이다.
+> 5. CPU는 Reset Vector에 저장된 'Far Jump' 명령어를 실행하여, 1 MiB 이하의 메모리 영역에 매핑된 BIOS 코드의 첫 번째 명령어로 이동한다.
+> 6. BIOS는 Power-On Self Test (POST)를 시작하여, 아래 사항을 점검한다:
+>     - 자기 자신 (BIOS 코드)의 체크섬 이상 여부
+>     - CPU와 RAM의 정상 동작 여부
+>     - Southbridge에 어떤 'Legacy' 주변 장치가 연결되어 있는가?
+>     - 메인 보드의 PCI 슬롯에 어떤 PCI 장치가 꽂혀 있는가?
+> 7. BIOS는 하드 디스크의 첫 번째 섹터를 읽고, 운영 체제의 Stage 0 Bootloader를 실행한다.
 
-1. 파워 서플라이 (Power Supply Unit, PSU)는 컴퓨터가 꺼져 있어도 AC 전원을 받아 메인 보드에 `+5 VSB`의 전압을 지속적으로 공급하는데, 본체의 전원 버튼을 `10-100 ms` 동안 누르면 메인 보드는 파워 서플라이의 `PS_​ON#` (Active-Low) 핀에 걸리는 전압을 `+5 V`에서 `0 V`로 내린 상태로 유지한다.
-2. 파워 서플라이는 `PS_​ON#`의 신호를 받아 `+12VDC`, `+5VDC`, `+3.3VDC` 등의 DC 출력 레일을 켜고, 메인 보드는 출력 레일의 전압이 안정될 때까지 CPU의 `RESET` 핀 전압을 `+5 V`로 올려 CPU를 계속 초기화시킨다.
-3. 모든 DC 출력 레일의 전압이 안정되면, 파워 서플라이는 메인 보드의 Super I/O (SIO) 칩에 `PWR_OK` 신호를 보내 이 사실을 알린다.
-4. 메인 보드는 CPU의 `RESET` 핀 전압을 다시 내리는데, 이때 CPU는 범용 레지스터 (`AX`, `BX`, ...), 상태 레지스터 (`FLAGS`), 프로그램 카운터 (`IP`)와 제어 레지스터 (`CR0`) 등이 모두 기본값으로 초기화된 상태이다. 
-5. CPU는 프로그램 카운터에 저장된 주소 (Reset Vector)를 읽고 그 주소가 가리키는 'Far Jump' 명령어를 실행하여, 프로그램 카운터에 메인 보드의 ROM 칩에 저장된 BIOS 코드의 첫 번째 명령어 주소를 넣는다.
-6. BIOS는 Power-On Self Test (POST)를 시작하는데, 여기서 BIOS는 자기 자신 (BIOS 코드)의 체크섬을 확인하고, CPU와 RAM이 정상적으로 동작하는지도 확인하며, Southbridge에 연결된 PS/2 방식의 마우스와 키보드 (초록색과 보라색의 동그란 단자), 사운드 카드, 하드 디스크 등의 주변 장치들을 탐색한다.
+<br>
 
-이러한 과정을 거친 후에는 드디어 BIOS가 메인 보드의 물리적인 PCI 슬롯을 하나씩 확인하면서 이 슬롯에 PCI 장치가 연결되어 있는지, 어떤 장치인지를 파악하는데, 이것을 PCI Enumeration이라 한다.
+이때, POST에서 메인 보드의 어느 PCI 슬롯에 무슨 장치가 꽂혀 있는지 확인하는 과정을 PCI Enumeration이라 한다:
+
+1. CPU는 `out` 명령어를 이용하여, PCI 버스 번호와 그 버스의 슬롯 번호를 I/O 포트 중 `CONFIG_ADDRESS` (`0xCF8`)로 보낸다.
+2. CPU가 `in` 명령어를 이용해 `CONFIG_DATA` (`0xCFC`)를 읽는 그 순간, Northbridge는 이 요청을 가로채서 해당 버스와 슬롯에 연결된 PCI 장치의 `IDSEL` 핀에 신호를 보낸다.
+3. PCI 장치가 꽂혀 있다면 이 장치는 `DEVSEL#` 핀을 통해 Northbridge에게 자신이 살아 있음을 알린다.
+4. Northbridge는 PCI 장치의 자기소개서 (Configuration Space) 중 일부 (4 B)를 CPU의 `AX` 레지스터에 Write한다.
 
 <br>
 

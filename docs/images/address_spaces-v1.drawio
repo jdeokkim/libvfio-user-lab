@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="Page-1" id="LlCuikwuphI2lN43PRAo">
+    <mxGraphModel dx="1672" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-28" connectable="0" parent="1" style="group;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="" vertex="1">
+          <mxGeometry height="690" width="270" x="270" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-1" parent="PlktCrDDmcPFdn1A2uZT-28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;verticalAlign=top;align=left;spacing=0;spacingTop=-24;fontStyle=1;spacingLeft=2;fontSize=14;textShadow=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="Memory Space (4 GiB)" vertex="1">
+          <mxGeometry height="680" width="200" x="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-2" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;textShadow=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x00000000" vertex="1">
+          <mxGeometry height="20" width="70" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-3" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;textShadow=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x00000400" vertex="1">
+          <mxGeometry height="20" width="70" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-4" parent="PlktCrDDmcPFdn1A2uZT-28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4F9E3;strokeColor=#82b366;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div&gt;Real-Mode&lt;/div&gt;&lt;div&gt;Interrupt Vector Table (1 KiB)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="200" x="70" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-6" parent="PlktCrDDmcPFdn1A2uZT-28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4F9E3;strokeColor=#82b366;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="BIOS Data (256 B)" vertex="1">
+          <mxGeometry height="20" width="200" x="70" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-7" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;textShadow=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x00007c00" vertex="1">
+          <mxGeometry height="20" width="70" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-8" parent="PlktCrDDmcPFdn1A2uZT-28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4F9E3;strokeColor=#82b366;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="Stage 0 Bootloader (512 B)" vertex="1">
+          <mxGeometry height="30" width="200" x="70" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-9" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;textShadow=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x00007e00" vertex="1">
+          <mxGeometry height="20" width="70" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-10" parent="PlktCrDDmcPFdn1A2uZT-28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4F9E3;strokeColor=#82b366;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="Extended BIOS Data (1 KiB)" vertex="1">
+          <mxGeometry height="30" width="200" x="70" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-11" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x0009fc00" vertex="1">
+          <mxGeometry height="20" width="70" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-13" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x000a0000" vertex="1">
+          <mxGeometry height="20" width="70" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-14" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;textShadow=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x00000500" vertex="1">
+          <mxGeometry height="20" width="70" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-15" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x000c0000" vertex="1">
+          <mxGeometry height="20" width="70" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-16" parent="PlktCrDDmcPFdn1A2uZT-28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4F9E3;strokeColor=#82b366;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="VGA Framebuffer (128 KiB)" vertex="1">
+          <mxGeometry height="80" width="200" x="70" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-17" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x000c7fff" vertex="1">
+          <mxGeometry height="20" width="70" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-19" parent="PlktCrDDmcPFdn1A2uZT-28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4F9E3;strokeColor=#82b366;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="PCI/AGP Memory (496 MiB)" vertex="1">
+          <mxGeometry height="100" width="200" x="70" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-20" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0xfeffffff" vertex="1">
+          <mxGeometry height="20" width="70" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-21" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0xe0000000" vertex="1">
+          <mxGeometry height="20" width="70" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-24" parent="PlktCrDDmcPFdn1A2uZT-28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4F9E3;strokeColor=#82b366;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="Video BIOS (32 KiB)" vertex="1">
+          <mxGeometry height="40" width="200" x="70" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-25" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x000f0000" vertex="1">
+          <mxGeometry height="20" width="70" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-26" parent="PlktCrDDmcPFdn1A2uZT-28" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4F9E3;strokeColor=#82b366;fontFamily=Pretendard;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DPretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="Mainboard BIOS (64 KiB)" vertex="1">
+          <mxGeometry height="60" width="200" x="70" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="PlktCrDDmcPFdn1A2uZT-27" parent="PlktCrDDmcPFdn1A2uZT-28" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNanum%2BGothic%2BCoding;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="0x000fffff" vertex="1">
+          <mxGeometry height="20" width="70" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-1" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="300" width="270" x="610" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-2" parent="5kXr1DKK4VJbILwUp1w7-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Pretendard;fontSource=https://fonts.googleapis.com/css?family=Pretendard;verticalAlign=top;align=left;spacing=0;spacingTop=-24;fontStyle=1;spacingLeft=2;fontSize=14;textShadow=1;" value="I/O Space (64 KiB)" vertex="1">
+          <mxGeometry height="280" width="200" x="70" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-3" parent="5kXr1DKK4VJbILwUp1w7-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEEDF;strokeColor=#d79b00;fontFamily=Pretendard;fontSource=https://fonts.googleapis.com/css?family=Pretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;" value="&lt;div&gt;Legacy I/O Devices (1 KiB)&lt;/div&gt;&lt;div&gt;[DMA, PIC, PS/2, RTC, ...]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="200" x="70" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-4" parent="5kXr1DKK4VJbILwUp1w7-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding;" value="0x00010000" vertex="1">
+          <mxGeometry height="20" width="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-5" parent="5kXr1DKK4VJbILwUp1w7-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding;" value="0x00000000" vertex="1">
+          <mxGeometry height="20" width="70" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-6" parent="5kXr1DKK4VJbILwUp1w7-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding;" value="0x00000400" vertex="1">
+          <mxGeometry height="20" width="70" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-7" parent="5kXr1DKK4VJbILwUp1w7-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding;" value="0x00000cf8" vertex="1">
+          <mxGeometry height="20" width="70" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-8" parent="5kXr1DKK4VJbILwUp1w7-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEEDF;strokeColor=#d79b00;fontFamily=Pretendard;fontSource=https://fonts.googleapis.com/css?family=Pretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;" value="CONFIG_ADDRESS (4 B)" vertex="1">
+          <mxGeometry height="20" width="200" x="70" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-9" parent="5kXr1DKK4VJbILwUp1w7-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding;" value="0x00000cfc" vertex="1">
+          <mxGeometry height="20" width="70" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-10" parent="5kXr1DKK4VJbILwUp1w7-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEEDF;strokeColor=#d79b00;fontFamily=Pretendard;fontSource=https://fonts.googleapis.com/css?family=Pretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;" value="CONFIG_DATA (4 B)" vertex="1">
+          <mxGeometry height="20" width="200" x="70" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-11" parent="5kXr1DKK4VJbILwUp1w7-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Nanum Gothic Coding;textShadow=1;fontSource=https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding;" value="0x00000cff" vertex="1">
+          <mxGeometry height="20" width="70" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="5kXr1DKK4VJbILwUp1w7-12" parent="5kXr1DKK4VJbILwUp1w7-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEEDF;strokeColor=#d79b00;fontFamily=Pretendard;fontSource=https://fonts.googleapis.com/css?family=Pretendard;verticalAlign=middle;align=center;spacing=0;spacingTop=0;fontStyle=0;spacingLeft=0;fontSize=12;textShadow=0;" value="PCI I/O Ports" vertex="1">
+          <mxGeometry height="120" width="200" x="70" y="10" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="aSyHKKlkG4LSOGD8t3GL" name="Page-2">
+    <mxGraphModel dx="1045" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
