@@ -166,24 +166,40 @@ CPU는 I/O Space, Configuration Space, 그리고 Memory Space라는 3가지의 �
 
 <br>
 
-이때, POST에서 메인 보드의 어느 PCI 슬롯에 무슨 장치가 꽂혀 있는지 확인하는 과정을 PCI Enumeration이라 한다:
+이때, POST에서 메인 보드의 어느 PCI 슬롯에 무슨 장치가 꽂혀 있는지 확인하는 과정을 PCI Enumeration이라 하고, 다음과 같이 진행된다:
 
-1. CPU는 `out` 명령어를 이용하여, PCI 버스 번호와 그 버스의 슬롯 번호를 I/O 포트 중 `CONFIG_ADDRESS` (`0xCF8`)로 보낸다.
+1. CPU는 PCI 슬롯을 확인하기 위해, `CONFIG_ADDRESS` (`0xCF8`)라는 I/O 포트로 아래와 같은 정보를 보낸다:
+    - **PCI 버스 번호:** 대부분의 컴퓨터는 PCI 버스가 단 하나 (Bus #0)지만, 메인 보드에 PCI-to-PCI Bridge가 꽂혀 있다면 버스도 하나 더 생긴다.
+    - **PCI 슬롯 번호:** PCI 버스의 몇 번째 슬롯을 조회할 것인가?
+    - **PCI 기능 번호:** PCI 장치가 꽂혀 있다면, 몇 번째 기능을 조회할 것인가?
+    - **레지스터 오프셋:** PCI 장치의 자기소개서 (Configuration Space) 내용 중 몇 번째 바이트부터 읽을 것인가?
 2. CPU가 `in` 명령어를 이용해 `CONFIG_DATA` (`0xCFC`)를 읽는 그 순간, Northbridge는 이 요청을 가로채서 해당 버스와 슬롯에 연결된 PCI 장치의 `IDSEL` 핀에 신호를 보낸다.
-3. PCI 장치가 꽂혀 있다면 이 장치는 `DEVSEL#` 핀을 통해 Northbridge에게 자신이 살아 있음을 알린다.
-4. Northbridge는 PCI 장치의 자기소개서 (Configuration Space) 중 일부 (4 B)를 CPU의 `AX` 레지스터에 Write한다.
+3. PCI 장치가 꽂혀 있다면 이 장치는 PCI 버스로 `DEVSEL#` 신호를 보내 Northbridge에게 자신이 살아 있음을 알린다.
+4. Northbridge는 PCI 장치의 Configuration Space 내용 중 4 B를 추출해 CPU의 `EAX` 레지스터에 저장한다.
+5. CPU는 `in` 명령어의 결과 값을 확인하기 위해 `EAX` 레지스터를 읽는다.
+    - 이 값이 `0xFFFFFFFF`일 경우, 해당 PCI 슬롯에 어떠한 장치도 꽂혀 있지 않음을 뜻한다.
 
 <br>
 
 ### Configuration Space
 
+**Configuration Space란 `CONFIG_ADDRESS` I/O 포트를 통해서만 접근할 수 있는 PCI 장치의 내부 레지스터들을 뜻하며, PCI 장치의 제조사, 종류 및 기능, 이 장치에게 필요한 메인 메모리 공간의 크기 등의 세부 정보가 담긴 '자기소개서' 영역이다.**
+
+> 컴퓨터를 좀 만져본 (운영 체제를 자주 설치해본) 사람이라면 플러그 앤 플레이 (Plug-and-Play, PnP)라는 용어를 들어본 적이 있을 것이다.
+> 
+> PCI 규격이 등장하기 전 (ISA가 주류였던 시기)에는 메인 보드에 새로운 주변 장치를 추가하는 것이 매우 까다로웠다. 그래픽 카드나 NVMe SSD를 메인 보드에 바로 끼우고 컴퓨터를 켜면 주변 장치를 바로 사용할 수 있는 요즘과 달리, 그 시기에는 주변 장치를 CPU의 몇 번째 인터럽트 (IRQ) 라인과 연결할지, I/O 포트는 몇 번째를 쓸지, DMA 컨트롤러의 몇 번째 채널에 연결할지를 사용자가 직접 정하는 것이 일반적이었다.
+> 
+> PCI 장치가 Configuration Space를 통해 자기 자신에 대한 세부 정보를 BIOS에 제공할 수 있게 되면서, 메인 보드에 주변 장치를 꽂기만 해도 바로 그 장치를 사용할 수 있는 시대가 열리게 되었다.
+
+Configuration Space는 다음과 같은 형태로 구성되어 있다:
+
+(추가 예정)
+
+또한, `out` 명령어로 `CONFIG_ADDRESS` I/O 포트에 '레지스터 오프셋' 값을 4씩 증가시켜 보내고 `in` 명령어로 `CONFIG_DATA` I/O 포트를 읽는 과정을 반복하면, Configuration Space의 모든 내용을 읽을 수 있다.
+
 <br>
 
 ### Memory Space
-
-<br>
-
-## PCI Enumeration
 
 <br>
 
